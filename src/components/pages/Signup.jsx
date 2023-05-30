@@ -15,7 +15,7 @@ const SignUp = () => {
     localStorage.setItem('password', password);
     localStorage.setItem('confirmName', confirmName);
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+        const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z0-9]).{8,}$/;
 
         if (!emailPattern.test(email)) {
             alert('Invalid email address!');
@@ -36,7 +36,16 @@ const SignUp = () => {
   };
 
   const redirectToSignup = () => {
-    window.location.href = '/home';
+
+   if(email && password && confirmName) {
+       window.location.href = '/home'; 
+   }
+
+   else {
+     alert('please fill all the field')
+   }
+      
+ 
   }
 
   return (
