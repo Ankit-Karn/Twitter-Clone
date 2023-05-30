@@ -1,49 +1,81 @@
-import React, { useState } from 'react';
-import {useNavigate} from 'react-router-dom';
+import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
+import styles from './Signin.module.css';
+import { SiTwitter } from 'react-icons/si';
+import { FcGoogle } from 'react-icons/fc';
 
-const ForgotPassword = () => {
 
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('')  
-  const navigate = useNavigate();
 
-  function handlePasswordChange(e){
-    setPassword(e.target.value)
-  }
+const Signin = () => {
 
-  function handleConfirmPasswordChange(e){
-    setConfirmPassword(e.target.value)
-  }
+    const navigate = useNavigate();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
-  function handleSubmission(e){
-    e.preventDefault();
-    if(password === confirmPassword){
-        localStorage.setItem("new password", password);
-        navigate('/signin');
+    function handleEmail(e) {
+        setEmail(e.target.value)
     }
-    else{
-        alert('password & confirmed password did not match!')
-    }
-  }
 
-  return (
-    <div>
-      <h1>Reset Password</h1>
-      <form onSubmit={handleSubmission}>
-        <label>
-            New Password: 
-            <input type='password' value={password} onChange={handlePasswordChange}/>
-        </label>
-        <br />
-        <label>
-            Confirm Password:
-            <input type='password' value={confirmPassword} onChange={handleConfirmPasswordChange}/>
-        </label>
-        <br />
-        <button type='submit'>Set New Password</button>
-      </form>
-    </div>
-  )
+    function handlePassword(e) {
+        setPassword(e.target.value)
+    }
+
+
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        localStorage.setItem("Email", email);
+        localStorage.setItem("Password", password);
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const passwordPattern = /^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[a-zA-Z]).{8,}$/;
+
+        if (!emailPattern.test(email)) {
+            alert('Invalid email address!');
+
+        }
+
+        if (!passwordPattern.test(password)) {
+            alert('Invalid Password!');
+        }
+        if (emailPattern.test(email) && passwordPattern.test(password)) {
+            navigate('/home');
+        }
+    }
+
+    function handleForgotPassword() {
+        navigate('/resetpassword')
+    }
+
+    return (
+        <>
+            <div className={styles.logoBox}>
+                <SiTwitter className={styles.Twticon} />
+                <h2>Sign in to Twitter</h2>
+                <button >
+                    <FcGoogle className={styles.Gicon} />
+                    Sign in with Google
+                </button>
+                <hr></hr>
+                <span>Or</span>
+                <br />
+                <form onSubmit={handleSubmit} >
+                    <label  >
+                        <input type="text" value={email} onChange={handleEmail} className={styles.input} placeholder="Email" />
+                    </label>
+                    <br />
+                    <br />
+                    <label>
+                        <input type="password" value={password} onChange={handlePassword} className={styles.input} placeholder="Password" />
+                    </label>
+                    <br />
+                    <button type="submit">Log in</button>
+                </form>
+                <button onClick={handleForgotPassword}>Forgot Password?</button>
+                <p>Don't have an account?<a>Sign up</a></p>
+            </div>
+        </>
+    )
 }
 
-export default ForgotPassword
+export default Signin;

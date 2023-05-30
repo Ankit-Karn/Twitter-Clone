@@ -1,10 +1,12 @@
 import './App.css';
-import Signin from './components/pages/Signin';
+//import Signin from './components/pages/Signin';
+import EmailVarification from './components/pages/EmailVarification';
 
 function App() {
   return (
     <div className="App">
-      <Signin/>
+      {/* <Signin/> */}
+      <EmailVarification/>
     </div>
   );
 }
