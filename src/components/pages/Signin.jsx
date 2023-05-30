@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import styles from './Signin.module.css';
 import { SiTwitter } from 'react-icons/si';
 import { FcGoogle } from 'react-icons/fc';
@@ -72,7 +72,11 @@ const Signin = () => {
                     <button type="submit">Log in</button>
                 </form>
                 <button onClick={handleForgotPassword}>Forgot Password?</button>
-                <p>Don't have an account?<a>Sign up</a></p>
+                <p>Don't have an account?</p>
+                <Link to="/signup">
+                  <button className={styles.btn}>Sign Up</button>
+                </Link>
+
             </div>
         </>
     )
