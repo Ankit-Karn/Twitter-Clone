@@ -10,6 +10,7 @@ import {
 import Homepage from './components/pages/homepage';
 import ForgotPassword from './components/pages/forgotpass';
 import Signin from './components/pages/Signin';
+import SignUp from './components/pages/Signup';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/signin",
     element: <Signin />,
+  },
+  {
+    path: "/signup",
+    element: <SignUp />,
   },
 ]);
 

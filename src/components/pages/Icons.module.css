@@ -1,0 +1,29 @@
+.postStastics{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 20%;
+    background-color: antiquewhite;
+}
+
+.heart {
+    cursor: pointer;
+}
+
+.heart:hover {
+    color: red;
+}
+.repost {
+    cursor: pointer;
+}
+
+.repost:hover {
+    color: blue;
+}
+.comment {
+    cursor: pointer;
+}
+
+.comment:hover {
+    color:green;
+}

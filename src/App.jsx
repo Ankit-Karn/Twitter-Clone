@@ -4,7 +4,7 @@ import Signin from './components/pages/Signin';
 function App() {
   return (
     <div className="App">
-      <Signin/>
+      <Signin />
     </div>
   );
 }
