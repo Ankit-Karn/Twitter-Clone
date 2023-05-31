@@ -30,7 +30,7 @@ function Icons() {
                     <BiComment /> {commentCount}
                 </div>
                 <div onClick={() => { }} className={style.graph} title='Graph'>
-                    < BiBarChart /> {3.7}k
+                    < BiBarChart /> {3.7}K
                 </div>
                 <div onClick={() => { }} className={style.share} title='Share'>
                     < FiShare /> 
