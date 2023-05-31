@@ -90,7 +90,7 @@ const Signin = () => {
                     <button type="submit">Log in</button>
                 </form>
                 <button onClick={handleForgotPassword}>Forgot Password?</button>
-                <p>Don't have an account?<a onClick={handleClick}>Sign up</a></p>
+                <p>Don't have an account?<a onClick={handleClick} className={styles.btn}>Sign up</a></p>
             </div>
         </>
     )

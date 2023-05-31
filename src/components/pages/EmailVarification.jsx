@@ -41,9 +41,10 @@ export default function EmailVarification() {
     };
 
     return (
-        <div className={styles.logoBox}>
-            {/* <RxCross2 className={styles.cross}/> */}
-            <SiTwitter className={styles.Twticon} />
+        <div className={styles.EmailVarification}>
+             <div classame={styles.img}>
+                <SiTwitter className={styles.Twticon} />
+            </div>
             <h1>Find your Twitter account</h1>
             <p>Enter the email associated with your account to change your password.</p>
 
@@ -52,8 +53,9 @@ export default function EmailVarification() {
                 label="Email" 
                 variant="filled" 
                 onChange={handleEmailChange}
-                style={{ color: "red", backgroundColor: "white", margin: "2rem", width: "23vw" }} />
-                <button className={styles.input} type='submit'>Next</button>
+                className={styles.input}
+                    />
+                <button className={styles.btn} type='submit'>Next</button>
             </form>
         </div>
 
