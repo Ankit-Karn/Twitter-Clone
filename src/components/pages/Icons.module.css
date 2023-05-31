@@ -27,3 +27,17 @@
 .comment:hover {
     color:green;
 }
+.graph{
+    cursor: pointer;
+}
+
+.graph:hover {
+    color:green;
+}
+.share{
+    cursor: pointer;
+}
+
+.share:hover {
+    color:green;
+}
