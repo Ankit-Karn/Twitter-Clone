@@ -5,11 +5,18 @@ import { MdInsertEmoticon } from 'react-icons/md'
 import { AiOutlineFileGif } from 'react-icons/ai'
 import { Button } from '@mui/material'
 import { BsFiles } from "react-icons/bs";
+import LeftSideBar from "./LeftSideBar";
+import Icons from './Icons';
+import RightSidebar from "./RightSidebar";
+import Whotofollow from "./Whotofollow";
+
 
 
 
 const TweetCard = ({ tweet }) => {
   return (
+
+
     <div className={styles.tweetCard}>
 
     <div className={styles.tweetCard2}>
@@ -27,6 +34,7 @@ const TweetCard = ({ tweet }) => {
    
      
     <img src={tweet.image}  className={styles.tweetCardImg}/>
+    <Icons />
 
     </div>
   )
@@ -50,7 +58,22 @@ const MainSection = () => {
     fetchTweets();
   }, []);
 
+
+
   return (
+    <div className={styles.sectionContainer}>
+           <div className={styles.itemWrapper}>
+
+          
+           <div className={styles.Leftsidebar}>
+           <LeftSideBar />
+           </div>
+
+
+
+{/*====================================================== Home Section =========================================*/
+/*====================================================== Home Section =========================================*/}
+
     <div className={styles.main}>
     
       <div className={styles.home}>
@@ -72,7 +95,7 @@ const MainSection = () => {
         <div className={styles.whatIsHappening}>
 
           <div className={styles.imputfield}>
-            <img src='https://sialifehospital.com/wp-content/uploads/2021/04/testimonial-1.png' />
+            <img src='https://sialifehospital.com/wp-content/uploads/2021/04/testimonial-1.png' height="50px" width="50px" />
             <input type="text" placeholder='What is happening?' />
           </div>
 
@@ -112,6 +135,14 @@ const MainSection = () => {
           </div>
       
     </div>
+
+    <div className={styles.RightSidebar}>
+      <RightSidebar />
+      <Whotofollow />
+    </div>
+
+    </div>
+  </div>
   )
 }
 

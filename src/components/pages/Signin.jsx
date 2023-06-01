@@ -66,6 +66,11 @@ const Signin = () => {
         navigate('/verifyemail')
     }
 
+
+    function homepage() {
+          navigate("/")
+    }
+
     return (
         <>
             <div className={styles.logoBox}>
@@ -88,7 +93,7 @@ const Signin = () => {
                         <input type="password" value={password} onChange={handlePassword} className={styles.input} placeholder="Password" />
                     </label>
                     <br />
-                    <button type="submit">Log in</button>
+                    <button type="submit" onClick={homepage}>Log in</button>
                 </form>
                 <button onClick={handleForgotPassword}>Forgot Password?</button>
                 <p>Don't have an account?<a onClick={handleClick}>Sign up</a></p>

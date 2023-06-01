@@ -6,14 +6,17 @@
   }
   
   body{
-    background-color: rgba(0, 0, 0, 0.4)
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
   }
   
-  .logoBox{
+  .EmailVarification{
     background: #fff;
-    padding: 30px 120px;
-    width: 40vw;
-    height: 90vh;
+    padding: 30px 40px;
+    width: 500px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -27,14 +30,14 @@
     height: 6vh;
   }
   
-.logoBox p {
-  font-size: 18px;
+.EmailVarification p {
+  font-size: 1rem;
   color: #555;
   /* margin: 40px 0 50px; */
 
 }
-.logoBox h1 {
-  margin-bottom: 20px;
+.EmailVarification h1 {
+  margin-bottom: 40px;
   margin-top: 23px;
   
 }
@@ -47,7 +50,15 @@
   left: 5%;
 
 }
+
 .input {
+  background-color: rgb(255, 255, 255);
+  width: 90%;
+  margin-top: 40px;
+}
+
+
+.btn {
   width: 90%;
   height: 8%;
   padding: 10px 0;

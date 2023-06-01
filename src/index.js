@@ -7,12 +7,13 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Homepage from './components/pages/homepage';
+import MainSection from './components/pages/homepage';
 import ForgotPassword from './components/pages/forgotpass';
 import Signin from './components/pages/Signin';
 import SignUp from './components/pages/Signup';
 import CreateAccount from './components/pages/CreateAccount';
 import EmailVarification from './components/pages/EmailVarification';
+
 
 const router = createBrowserRouter([
   {
@@ -20,8 +21,8 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/home",
-    element: <Homepage />,
+    path: "/mainsection",
+    element: <MainSection />,
   },
   {
     path: "/resetpassword",
