@@ -23,13 +23,13 @@ function Icons() {
                 <div onClick={onHeartClick} className={style.heart} title='Like'>
                     <BiHeart /> {heartCount}
                 </div>
-                <div onClick={onRepostClick} className={style.repost} title='Repost'>
+                <div onClick={onRepostClick} className={style.repost} title='Retweet'>
                     <BiRepost /> {repostCount}
                 </div>
-                <div onClick={onCommentClick} className={style.comment} title='Comment'>
+                <div onClick={onCommentClick} className={style.comment} title='Reply'>
                     <BiComment /> {commentCount}
                 </div>
-                <div onClick={() => { }} className={style.graph} title='Graph'>
+                <div onClick={() => { }} className={style.graph} title='View'>
                     < BiBarChart /> {3.7}K
                 </div>
                 <div onClick={() => { }} className={style.share} title='Share'>
