@@ -4,15 +4,30 @@ import { BsImages } from 'react-icons/bs'
 import { MdInsertEmoticon } from 'react-icons/md'
 import { AiOutlineFileGif } from 'react-icons/ai'
 import { Button } from '@mui/material'
+import { BsFiles } from "react-icons/bs";
+
 
 
 const TweetCard = ({ tweet }) => {
   return (
     <div className={styles.tweetCard}>
-      <h3>{tweet.name}</h3>
-      <p>{tweet.user_name}</p>
-      <p>{tweet.paragraph}</p>
-      <img src={tweet.image} />
+
+    <div className={styles.tweetCard2}>
+      <img src={tweet.image}  className={styles.tweetCardImgP}/>
+      
+      <div className={styles.tweetCard2Detail}>
+      <h3 className={styles.tweetCardh3}>{tweet.name}</h3>
+      <p className={styles.tweetCardh4}> {tweet.user_name}</p>
+      <p className={styles.tweetCardpara}>{tweet.paragraph.slice(0,20)}</p>
+      </div>
+
+     
+    </div>
+   
+   
+     
+    <img src={tweet.image}  className={styles.tweetCardImg}/>
+
     </div>
   )
 }
@@ -36,28 +51,53 @@ const MainSection = () => {
   }, []);
 
   return (
-    <>
-      <div className={styles.main}>
-        <div className={styles.home}>
+    <div className={styles.main}>
+    
+      <div className={styles.home}>
+
+      <div className={styles.homeh1}>
           <h1>Home</h1>
-          <Button className={styles.buttonContainer}>For you</Button>
-          <Button className={styles.buttonContainer}>Following</Button>
-        </div>
+          </div>
+      
+          <div className={styles.btn1}>
+          <button className={styles.btn}>For you</button>
+          <button className={styles.btn}>Following</button>
+          </div>
+
+
+     </div>
+
+
 
         <div className={styles.whatIsHappening}>
+
           <div className={styles.imputfield}>
             <img src='https://sialifehospital.com/wp-content/uploads/2021/04/testimonial-1.png' />
-            <input placeholder='What is happening?' />
+            <input type="text" placeholder='What is happening?' />
           </div>
 
           <div className={styles.icons}>
-            <BsImages className={styles.BsImages} />
-            <MdInsertEmoticon className={styles.emoji} />
-            <AiOutlineFileGif className={styles.gif} />
-            <button className={styles.btn}><h5>Tweet</h5></button>
+
+              <div classname={styles.Icon}>
+              <BsImages className={styles.BsImages} />
+              <MdInsertEmoticon className={styles.emoji} />
+              <AiOutlineFileGif className={styles.gif} />
+              <BsFiles className={styles.file} />
+              </div>
+
+              <div className={styles.tweetbutton}>
+                 <button className={styles.tweetbtn}>Tweet</button>
+              </div>
+
           </div>
 
+          
+
+        
+
         </div>
+
+
         <div className='homeLower'>
 
         </div>
@@ -70,9 +110,8 @@ const MainSection = () => {
             
           }
           </div>
-        </div>
       
-    </>
+    </div>
   )
 }
 
