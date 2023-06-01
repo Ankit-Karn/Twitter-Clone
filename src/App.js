@@ -3,12 +3,14 @@ import './App.css';
 // import EmailVarification from './components/pages/EmailVarification';
 import RightSidebar from './components/Homepage/RightSidebar';
 
+
 function App() {
   return (
     <div className="App">
       {/* <Signin/> */}
       {/* <EmailVarification/> */}
-      <RightSidebar/>
+    <RightSidebar/>
+   
     </div>
   );
 }
