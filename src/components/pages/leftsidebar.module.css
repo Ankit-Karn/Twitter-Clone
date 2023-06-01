@@ -1,0 +1,57 @@
+.main {
+    background: white;
+    display: flex;
+    margin-top: 10px;
+}
+
+
+/*----------------------------------------------------  LeftSideBar -------------------------------------------------*/
+.LeftSideBar {
+   margin-top: 70px;
+}
+
+.details {
+    display: flex;
+     flex-direction: row;
+     margin-bottom: 40px;
+}
+
+.details:hover {
+  background: rgb(46, 156, 235);
+}
+
+.text {
+    margin-left: 15px;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.twitterIcon {
+    color: rgb(47, 183, 236);
+}
+
+.btn {
+    background: rgb(46, 156, 235);
+    padding: 14px 50px;
+     width: 100%;
+     color: white;
+     font-weight: bold;
+     cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid transparent;
+}
+
+.btn2 {
+    margin-top: 20px;
+    background: rgb(22, 22, 23);
+    padding: 14px 30px;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+     cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid transparent;
+}
+
+
+
